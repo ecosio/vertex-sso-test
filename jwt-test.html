@@ -234,10 +234,10 @@
           const isLocal = base.includes('local.ecosio.com');
           const redirectBase = isLocal ? 'https://local.ecosio.com/monitor' : 'https://app.dev.ecosio.com/monitor';
 
-          log(`Redirecting iframe to: ${redirectBase}/messages?noLayout=true`, 'INFO');
+          log(`Redirecting iframe to: ${redirectBase}/connectors?noLayout=true`, 'INFO');
 
           setTimeout(() => {
-            window.location.href = `${redirectBase}/messages?noLayout=true`;
+            window.location.href = `${redirectBase}/connectors?noLayout=true`;
           }, 1000);
         } else {
           log(`REJECTED: ${resp.status}`, 'ERROR', `Check if your JWT secret matches the target environment.`, xUniqueId);
